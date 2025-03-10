@@ -86,7 +86,7 @@ const Log = () => {
                 {
                     index === 0 && (
                         <View style={{width: '100%', alignItems: 'center'}}>
-                            <Image source={require('../assets/logo.png')} style={{width: 195, height: 100, resizeMode: 'contain', marginBottom: 100, marginTop: height * 0.2}} />
+                            <Image source={require('../assets/logo.png')} style={{width: 195, height: 100, resizeMode: 'contain', marginBottom: height * 0.1, marginTop: height * 0.2}} />
                             <Text style={styles.text}>Dive into the world of the Sphinx, solve its riddles, and uncover hidden secrets. Explore myths and legends associated with this enigmatic creature, learn about its role in ancient civilizations, and battle enemies in an exciting mini-game. The Sphinx awaits for you to reveal all its mysteries!</Text>
                         </View>
                     )

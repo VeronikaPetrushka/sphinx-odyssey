@@ -32,12 +32,6 @@ const Menu = () => {
 
             <TouchableOpacity 
                 style={styles.button} 
-                onPress={() => handleNavigate('')}>
-                <Icons type={'2'} active={activeButton === ''}/>
-            </TouchableOpacity>
-
-            <TouchableOpacity 
-                style={styles.button} 
                 onPress={() => handleNavigate('TopicScreen')}>
                 <Icons type={'3'} active={activeButton === 'TopicScreen'}/>
             </TouchableOpacity>
@@ -50,8 +44,8 @@ const Menu = () => {
 
             <TouchableOpacity 
                 style={styles.button} 
-                onPress={() => handleNavigate('QuizScreen')}>
-                <Icons type={'5'} active={activeButton === 'QuizScreen'}/>
+                onPress={() => handleNavigate('PyramidsScreen')}>
+                <Icons type={'5'} active={activeButton === 'PyramidsScreen'}/>
             </TouchableOpacity>
 
         </View>
@@ -66,7 +60,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         flexDirection: 'row',
         paddingVertical: 15,
-        paddingHorizontal: 30
+        paddingHorizontal: 50
     },
     
     button: {

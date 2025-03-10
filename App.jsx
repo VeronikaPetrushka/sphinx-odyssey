@@ -5,11 +5,18 @@ import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import { MusicProvider } from './src/constants/music';
+import Music from './src/components/Music';
+
 import LogScreen from './src/screens/LogScreen';
 import TopicScreen from './src/screens/TopicScreen';
 import SelectedTopicScreen from './src/screens/SelectedTopicScreen';
 import ReadFirstScreen from './src/screens/ReadFirstScreen';
 import ReadSecondScreen from './src/screens/ReadSecondScreen';
+import PyramidsScreen from './src/screens/PyramidsScreen';
+import ReadPyramidScreen from './src/screens/ReadPyramidScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
+import RiddleScreen from './src/screens/RiddleScreen';
 
 enableScreens();
 
@@ -46,40 +53,63 @@ const LoadingScreen = ({ navigation }) => {
 const App = () => {
 
   return (
-          <NavigationContainer>
-              <Stack.Navigator initialRouteName={"LoadingScreen" }>
-                  <Stack.Screen 
-                        name="LoadingScreen" 
-                        component={LoadingScreen} 
-                        options={{ headerShown: false }} 
-                  />
-                  <Stack.Screen 
-                        name="LogScreen" 
-                        component={LogScreen} 
-                        options={{ headerShown: false }} 
-                  />
-                  <Stack.Screen 
-                        name="TopicScreen" 
-                        component={TopicScreen} 
-                        options={{ headerShown: false }} 
-                  />
-                  <Stack.Screen 
-                        name="SelectedTopicScreen" 
-                        component={SelectedTopicScreen} 
-                        options={{ headerShown: false }} 
-                  />
-                  <Stack.Screen 
-                        name="ReadFirstScreen" 
-                        component={ReadFirstScreen} 
-                        options={{ headerShown: false }} 
-                  />
-                  <Stack.Screen 
-                        name="ReadSecondScreen" 
-                        component={ReadSecondScreen} 
-                        options={{ headerShown: false }} 
-                  />
-              </Stack.Navigator>
-          </NavigationContainer>
+    <MusicProvider>
+            <Music />
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName={"LoadingScreen" }>
+                    <Stack.Screen 
+                          name="LoadingScreen" 
+                          component={LoadingScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="LogScreen" 
+                          component={LogScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="TopicScreen" 
+                          component={TopicScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="SelectedTopicScreen" 
+                          component={SelectedTopicScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="ReadFirstScreen" 
+                          component={ReadFirstScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="ReadSecondScreen" 
+                          component={ReadSecondScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="PyramidsScreen" 
+                          component={PyramidsScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="ReadPyramidScreen" 
+                          component={ReadPyramidScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="SettingsScreen" 
+                          component={SettingsScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                    <Stack.Screen 
+                          name="RiddleScreen" 
+                          component={RiddleScreen} 
+                          options={{ headerShown: false }} 
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+      </MusicProvider>
     );
 };
 

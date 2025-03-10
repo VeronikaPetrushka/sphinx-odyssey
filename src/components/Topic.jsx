@@ -48,14 +48,15 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.9,
         shadowRadius: 7,
         marginBottom: 30,
-        padding: 40
     },
 
     btnText: {
         fontSize: 24,
         fontWeight: '800',
         color: '#fee64e',
-        textAlign: 'center'
+        textAlign: 'center',
+        flexWrap: 'wrap',
+        width: '80%'
     }
 
 })
