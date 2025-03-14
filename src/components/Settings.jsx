@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { View, Text, TouchableOpacity, Alert, StyleSheet, Dimensions, Switch, Image } from "react-native"
+import { View, Text, TouchableOpacity, Alert, StyleSheet, Dimensions, Switch, Image, ImageBackground } from "react-native"
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import LinearGradient from "react-native-linear-gradient";
 import { useMusic } from '../constants/music.js';
@@ -30,7 +30,7 @@ const Settings = () => {
     
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <Image source={require('../assets/sphinx.png')} style={{width: 248, height: 248, resizeMode: 'contain', alignSelf: 'center', marginBottom: 20}} />
@@ -56,7 +56,7 @@ const Settings = () => {
                 </TouchableOpacity>
 
             </View>
-        </LinearGradient>
+        </ImageBackground>
     )
 };
 

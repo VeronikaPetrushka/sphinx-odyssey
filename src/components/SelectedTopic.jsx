@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native"
-import LinearGradient from "react-native-linear-gradient";
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView, ImageBackground } from "react-native"
 import { useNavigation } from "@react-navigation/native";
 
 const { height } = Dimensions.get('window');
@@ -17,7 +16,7 @@ const SelectedTopic = ({ item }) => {
     }
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 {
@@ -56,7 +55,7 @@ const SelectedTopic = ({ item }) => {
                 }
 
             </View>
-        </LinearGradient>
+        </ImageBackground>
     )
 };
 

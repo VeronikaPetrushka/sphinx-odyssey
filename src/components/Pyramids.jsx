@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native"
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView, ImageBackground } from "react-native"
 import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import pyramids from "../constants/pyramids";
@@ -20,7 +20,7 @@ const Pyramids = () => {
     };
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 {
@@ -48,14 +48,14 @@ const Pyramids = () => {
                                         {
                                             pyramids.map((item, index) => (
                                                 <TouchableOpacity key={index} onPress={() => setSelected(item)}>
-                                                    <Image source={item.pyramid} style={{width: height * 0.115, height: height * 0.115, resizeMode: 'contain', margin: 5}} />
+                                                    <Image source={item.pyramid} style={{width: height * 0.110, height: height * 0.110, resizeMode: 'contain', margin: 5}} />
                                                 </TouchableOpacity>
                                             ))
                                         }
                                     </View>
                                 </LinearGradient>
                             </View>
-                            <Image source={selected ? selected.pyramid : require('../assets/pyramids/unknown.png')} style={{width: height * 0.115, height: height * 0.115, resizeMode: 'contain', marginTop: 20, alignSelf: 'center'}} />
+                            <Image source={selected ? selected.pyramid : require('../assets/pyramids/unknown.png')} style={{width: height * 0.110, height: height * 0.110, resizeMode: 'contain', marginTop: 20, alignSelf: 'center'}} />
                             <View style={{height: 170}} />
                         </ScrollView>
                     )
@@ -68,7 +68,7 @@ const Pyramids = () => {
                 </TouchableOpacity>
 
             </View>
-        </LinearGradient>
+        </ImageBackground>
     )
 };
 

@@ -103,7 +103,7 @@ const Riddle = () => {
                             </View>
                         </ImageBackground>
                 ) : (
-                        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+                        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
                             <View style={styles.container}>
                 
                                 <View style={{width: '100%', flexGrow: 1, alignItems: 'center'}}>
@@ -122,7 +122,7 @@ const Riddle = () => {
                                 </TouchableOpacity>
                 
                             </View>
-                    </LinearGradient>
+                        </ImageBackground>
                 )
             }
 

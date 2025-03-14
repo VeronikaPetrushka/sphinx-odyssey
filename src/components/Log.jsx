@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, TextInput, Alert } from "react-native"
+import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, TextInput, Alert, ImageBackground } from "react-native"
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { launchImageLibrary } from "react-native-image-picker";
 import LinearGradient from "react-native-linear-gradient";
@@ -80,7 +80,7 @@ const Log = () => {
     };
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 {
@@ -126,7 +126,7 @@ const Log = () => {
                 </TouchableOpacity>
 
             </View>
-        </LinearGradient>
+        </ImageBackground>
     )
 };
 

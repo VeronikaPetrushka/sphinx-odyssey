@@ -1,5 +1,4 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native"
-import LinearGradient from "react-native-linear-gradient";
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView, ImageBackground } from "react-native"
 import { useNavigation } from "@react-navigation/native";
 import Icons from "./Icons";
 
@@ -9,7 +8,7 @@ const ReadSecond = ({ item }) => {
     const navigation = useNavigation();
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={{width: 40, height: 40, marginBottom: 20}} onPress={() => navigation.goBack('')}>
@@ -28,7 +27,7 @@ const ReadSecond = ({ item }) => {
                 </ScrollView>
 
             </View>
-        </LinearGradient>
+        </ImageBackground>
     )
 };
 

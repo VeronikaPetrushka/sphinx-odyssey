@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, FlatList, ScrollView } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, FlatList, ScrollView, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icons from "./Icons";
 
@@ -31,7 +30,7 @@ const ReadPyramid = ({ item }) => {
     }));
 
     return (
-        <LinearGradient colors={["#2925dd", "#fc4afc"]} style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
                     <Icons type={"back"} />
@@ -59,7 +58,7 @@ const ReadPyramid = ({ item }) => {
                     scrollEventThrottle={16}
                 />
             </View>
-        </LinearGradient>
+        </ImageBackground>
     );
 };
 
